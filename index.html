@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+	<title>猜猜猜</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/face.css" />
+</head>
+<body>
+	<!-- loading -->
+	<div id="loader" style="position:absolute; top: 0; left: 0; z-index: 99999; width: 100%; height: 100%; overflow: hidden; background-color: #c52420; text-align: center;">
+		<img class="loadingImg" src="img/logo.png">
+	</div>
+
+	<section id="container">
+
+		<!-- 首页 -->
+		<div id="main" class="pageWrapper">
+			<div class="page">
+				<a class="main_release" href="#release"></a>
+				<a class="main_check" href="#guessList">没懂？看看别人怎么“说”</a>
+			</div>
+		</div>
+
+		<!-- 发布页面 -->
+		<div id="release" class="pageWrapper">
+			<div class="page release_page">
+				<div id="page_inputBox" class="page_inputBox empty">
+					<div id="page_faceBox" class="page_faceBox clearfix">请选择表情符号</div><b class="inputCursor"></b>
+				</div>
+
+				<input id="correctAnswer" class="page_input" type="text" placeholder="请输入正确答案" />
+
+				<input id="answerTips" class="page_input" type="text" placeholder="请输入提示语" />
+
+				<btn id="releaseBtn" class="widthBtn">发 表</btn>
+				
+				<!-- 表情面板 -->
+				<div id="page_faceWrapper" class="page_faceWrapper">
+					<div id="face_panelWrapper" class="face_panelWrapper">
+					</div>
+
+					<div id="face_tabWrap" class="face_tabWrap">
+						<div id="face_tab" class="face_tab clearfix">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 猜猜猜详情 -->
+		<div id="guessDetail" class="pageWrapper">
+			<div class="page guess_page">
+				<div class="guess_box">
+					<img class="guess_logo" src="img/logo.png">
+					<div class="guess_contBox">
+						<img id="guessDetail_owner_headimg" class="guess_headImg" src="">
+						<div id="guessDetail_owner_cont" class="guess_cont white clearfix">
+						</div>
+					</div>
+					
+					<div id="guessDetail_submitWrapper" class="input_wrapper clearfix">
+						<btn id="submitAnswer" class="smallBtn f_r">提 交</btn>
+						<div class="guessDetail_answer_wrapper">
+							<input id="guessDetail_answer" class="page_input" type="text" placeholder="请输入您心中的答案" />
+						</div>
+						
+					</div>
+
+					<div class="submitAnswer_wrapper">
+						<a id="submintCheckOther" class="smallBtn" href="#guessList">查看别人</a>
+						<a id="submintRelease" class="smallBtn" href="#release">我也要发</a>
+						
+					</div>
+					
+
+					<div id="guessDetail_btns" class="guess_btn_wrapper">
+						<btn class="littleBtn shareBtn">分享</btn>
+						<a class="littleBtn releaseAgain" href="#release">我也要发</a>
+						<a class="littleBtn checkOthers" href="#guessList">查看别人</a>
+					</div>
+				</div>
+
+				<div class="guess_commentBox">
+					<h3 id="commentBoxTitle" class="commentBox_title">好友答案</h3>
+					<ul id="guessDetail_comment_ul" class="commentBox_wrapper">
+						<!-- <li class="comment_item clearfix">
+							<img class="comment_headImg" src="img/logo.png">
+							<div class="comment_itemBox">
+								<span class="comment_itemName">李辉melon</span>
+								<div class="comment_itemCont">李辉melon</div>
+							</div>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 我发布的猜猜猜 -->
+		<div id="myGuess" class="pageWrapper">
+			<div class="page guess_page">
+				<div class="guess_box">
+					<img class="guess_logo" src="img/logo.png">
+					<div class="guess_contBox">
+						<img id="myGuess_ownerHeader" class="guess_headImg" src="img/logo.png">
+						<div id="myGuess_cont" class="guess_cont white clearfix">
+						</div>
+					</div>
+
+					<div class="guess_btn_wrapper">
+						<btn class="littleBtn shareBtn">分享</btn>
+						<a class="littleBtn releaseAgain" href="#release">再发一条</a>
+						<a class="littleBtn checkOthers" href="#guessList">查看别人</a>
+					</div>
+				</div>
+
+				<div class="guess_commentBox">
+					<h3 class="commentBox_title">好友答案</h3>
+					<div class="commentBox_wrapper">
+							<!-- <li class="comment_item clearfix">
+								<img class="comment_headImg" src="img/logo.png">
+								<div class="comment_itemBox">
+									<span class="comment_itemName">李辉melon</span>
+									<div class="comment_itemCont">李辉melon</div>
+								</div>
+							</li> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 猜猜猜列表 -->
+		<div id="guessList" class="pageWrapper">
+			<!-- <div class="guessList_tips">2.0版本马上上线，会更好玩哟~</div> -->
+			<div class="page">
+				<div id="guessList_ul" class="commentBox_wrapper">
+					<!-- <li class="comment_item clearfix">
+						<img class="comment_headImg" src="img/logo.png">
+						<div class="comment_itemBox">
+							<span class="comment_itemName">李辉melon</span>
+							<div class="comment_itemCont clearfix">
+							</div>
+						</div>
+					</li> -->
+				</div>
+				<div class="guessList_more">查看更多</div>
+			</div>
+		</div>
+
+
+		<!-- 消息列表 -->
+		<div id="messageList" class="pageWrapper">
+			<div id="messageList_page" class="page"></div>
+			<div class="messageList_more">查看更多</div>
+		</div>
+
+	</section>
+
+	<!-- 信息提示框 -->
+	<div id="tipMsg_box"></div>
+
+	<!-- 分享提示 -->
+	<div id="shareMask">
+		<img class="shareIcon" src="img/answer_bg.png">
+	</div>
+
+	<div id="correctAnswer_mask">
+		<div class="answerBg">
+			<div class="answer_mask_title">正确答案</div>
+			<div id="answer_mask_cont" class="answer_mask_cont"></div>
+		</div>
+	</div>
+
+	<!-- 消息提示 -->
+	<a id="messageTip" href="#messageList">
+		
+	</a>
+
+	<!-- 统计 -->
+	<div style="display: none;">
+		<script src="http://s95.cnzz.com/z_stat.php?id=1257037096&web_id=1257037096" language="JavaScript"></script>
+	</div>
+	
+	
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/fastclick.js"></script>
+	<script type="text/javascript" src="js/guess.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

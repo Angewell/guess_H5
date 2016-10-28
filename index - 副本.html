@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+	<title>猜猜猜</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/face.css" />
+</head>
+<body>
+	<section id="container">
+		<div id="release" class="pageWrapper active">
+			<div class="page release_page">
+				<div id="page_inputBox" class="page_inputBox empty">
+					<div id="page_faceBox" class="page_faceBox clearfix">请选择表情符号</div><b class="inputCursor"></b>
+				</div>
+
+				<input id="correctAnswer" class="page_input" type="text" placeholder="请输入正确答案">
+
+				<input id="answerTips" class="page_input" type="text" placeholder="请输入提示语">
+
+				<btn id="releaseBtn" class="widthBtn">发 表</btn>
+				
+				<!-- 表情面板 -->
+				<div id="page_faceWrapper" class="page_faceWrapper">
+					<div id="face_panelWrapper" class="face_panelWrapper">
+						<div class="face_panel">
+							<ul class="face_panel_inner clearfix">
+								<li class="face_panel_li clearfix">
+									<div class="face_wrapper">
+										<span class="face faceImg1 face1" data-id="1"></span>
+									</div>
+									<div class="face_wrapper">
+										<span class="face faceImg1 face2" data-id="2"></span>
+									</div>
+									<div class="face_wrapper">
+										<span class="face faceImg1 face3" data-id="3"></span>
+									</div>
+									<div class="face_wrapper">
+										<span class="face faceImg1 face4" data-id="4"></span>
+									</div>
+									<div class="face_wrapper">
+										<span class="face faceImg1 face5" data-id="5"></span>
+									</div>
+									<div class="face_wrapper">
+										<span class="face faceImg1 face6" data-id="6"></span>
+									</div>
+									<div class="face_wrapper">
+										<span class="face faceImg1 face7" data-id="7"></span>
+									</div>
+									<div class="face_wrapper">
+										<span class="face faceImg1 face8" data-id="8"></span>
+									</div>
+									<div class="face_wrapper">
+										<span class="face faceImg1 face9" data-id="9"></span>
+									</div>
+									<div class="face_wrapper">
+										<span class="face faceImg1 face10" data-id="10"></span>
+									</div>
+								</li>
+							</ul>
+
+							<div class="face_panel_label">
+								<span class="face_label face_label_on"></span>
+								<span class="face_label"></span>
+								<span class="face_label"></span>
+								<span class="face_label"></span>
+							</div>
+						</div>
+					</div>
+
+					<div id="face_tabWrap" class="face_tabWrap">
+						<div id="face_tab" class="face_tab clearfix">
+							<div class="face_tab_item on">人物</div>
+							<div class="face_tab_item">动物</div>
+							<div class="face_tab_item">运动</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	
+	
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/fastclick.js"></script>
+	<script type="text/javascript" src="js/guess.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
